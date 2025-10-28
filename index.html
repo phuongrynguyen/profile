@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Vui Thì Code ( Nấm lùn )">
+  <title>Trang cá nhân</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- logic thông báo -->
+  <div class="trues">
+    bạn đăng nhập thành công 
+  </div>
+  <div class="falsee">
+    bạn đăng nhập thất bại 
+  </div>
+  <!-- from nhập key + token -->
+  <div class="token">
+    <div class="token-ig">
+      <img src="avatar1.png">
+    </div>
+    <div class="frm">
+      <p>
+        bạn cần sử dụng token để ở tiểu sử của băng vy để nhập vào.
+      </p>
+        <div class="div">
+        <div class="token-user">
+          <label>
+            Token <input type="text" id="token">
+          </label>
+        </div>
+        <div class="key-pass">
+          <label>
+            Key <input type="password" id="key">
+          </label>
+        </div>
+        <div class="btn" onclick="dataToken()">
+          <button>đăng nhập</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="man">
+    
+  </div>
+  <!-- panner -->
+  <div class="ner">
+  <div class="panner">
+    <div class="ig">
+      <img src="avatar1.png">
+      <h2>Vy Xinh Gái</h2>
+    </div>
+  </div>
+</div>
+  <div class="profile-container">
+    <div class="cover-photo">
+      <img src="cover.png" alt="Ảnh bìa">
+      <div class="avatar">
+        <img src="avatar1.png" alt="Ảnh đại diện">
+      </div>
+    </div>
+
+    <div class="profile-info">
+      <h2>Vy Xinh Gái (Vy Xinh)</h2>
+      <p class="friends">1,9K người bạn</p>
+      <p class="desc">Dev - かわいい子猫 - Vy Tiểu Băng ( Vy Xinh )</p>
+      <p class="desc"></p>
+      <nav class="tabs">
+        <a class="active" id="baiviet">Bài viết</a>
+        <script>
+          document.getElementById("baiviet").addEventListener('click', function(){
+            document.querySelector(".baiviet").style.display = "block";
+            document.querySelector(".anh").style.display = "none";
+            document.querySelector(".manguon").style.display = "none";
+           
+           /* */
+           
+            document.getElementById("baiviet").classList.add("active");
+            document.getElementById("anh").classList.remove("active");
+            document.getElementById("manguon").classList.remove("active");
+            
+            /* */
+          })
+        </script>
+        <a id="anh">Ảnh</a>
+        <script>
+          document.getElementById("anh").addEventListener('click', function(){
+            document.querySelector(".baiviet").style.display = "none";
+            document.querySelector(".anh").style.display = "block";
+            document.querySelector(".manguon").style.display = "none";
+            
+                       /* */
+           
+            document.getElementById("baiviet").classList.remove("active");
+            document.getElementById("anh").classList.add("active");
+            document.getElementById("manguon").classList.remove("active");
+            
+            /* */
+          })
+        </script>
+        <a id="manguon">Mã nguồn</a>
+        <script>
+          document.getElementById("manguon").addEventListener('click', function(){
+            document.querySelector(".baiviet").style.display = "none";
+            document.querySelector(".anh").style.display = "none";
+            document.querySelector(".manguon").style.display = "block";
+            
+                       /* */
+           
+            document.getElementById("baiviet").classList.remove("active");
+            document.getElementById("anh").classList.remove("active");
+            document.getElementById("manguon").classList.add("active");
+            
+            /* */
+          })
+        </script>
+      </nav>
+    </div>
+    <div class="data">
+      <!-- data list đom tab -> js - html vào -->
+    </div>
+    <!-- Bài viết -->
+    <div class="baiviet">
+      
+    </div>
+<!-- ảnh -->
+<div class="anh">
+  <h1>Ảnh của tôi</h1>
+
+  <div class="gallery">
+    
+  </div>
+</div>
+<!-- Mã nguồn -->
+<div class="manguon">
+  
+</div>
+<audio id="Myaudio" autoplay loop>
+  <source src="mp3.mp3">
+</audio>
+</div>
+<script src="baiviet.js"></script>
+<script src="anh.js"></script>
+<script src="manguon.js"></script>
+<script src="index.js"></script>
+<script src="check.js"></script>
+</body>
+</html>
